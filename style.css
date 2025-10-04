@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #f04b04, #96e6a1); /* Banana leaf shades */
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Subtle texture overlay for leaf veins */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
+  background-size: 35px 35px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+header {
+  background: #02672f; /* Curry leaf green */
+  color: white;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.controls {
+  margin-top: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; /* ✅ ensures wrapping on small screens */
+}
+
+header input {
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: none;
+  flex: 1;
+  min-width: 220px; /* ✅ keeps it readable */
+  max-width: 400px;
+}
+
+header select {
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: none;
+  min-width: 150px;
+}
+
+
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  padding: 2rem;
+}
+
+.recipe-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 2px solid #a5d6a7;
+}
+
+.recipe-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.recipe-card .info {
+  padding: 0.8rem 1rem 1rem 1rem;
+}
+
+.recipe-card h3 {
+  margin: 0.5rem 0;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  margin: 5% auto;
+  padding: 1.5rem 2rem;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #2e7d32;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column; /* stack vertically */
+    align-items: stretch;
+  }
+
+  header input, header select {
+    width: 100%; /* full width on small screens */
+  }
+}
+h1{
+  font-style:unset;
+  font-family: 'Times New Roman', Times, serif;
+  color: #FFA500;
+}

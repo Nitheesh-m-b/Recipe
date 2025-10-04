@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>South Indian Recipe Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 style="font-size: 40px; font-weight: bold; text-align: center ;"><b>SOUTH INDIAN RECIPES</b> 
+  <img src="https://media.istockphoto.com/id/1279070167/vector/nature-chef-hat-with-healthy-cooking.jpg?s=612x612&w=0&k=20&c=VzDgBCzewhiVCSDv_eXszcbAsgzBxXYpqm8zJhzqnfc=" style="width:100px; height:100px; vertical-align:middle; margin-right:8px;">
+  
+</h1>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search recipes by name or ingredient...">
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="Vegetarian">Vegetarian</option>
+        <option value="Non-Vegetarian">Non-Vegetarian</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <div id="recipe-list" class="recipe-list"></div>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modal-image" src="" alt="Recipe Image">
+      <h2 id="modal-title"></h2>
+      <p><strong>Type:</strong> <span id="modal-type"></span></p>
+      <p><strong>Category:</strong> <span id="modal-category"></span></p>
+      <p><strong>Cooking Time:</strong> <span id="modal-time"></span></p>
+      <p><strong>Difficulty:</strong> <span id="modal-difficulty"></span></p>
+      <p><strong>Servings:</strong> <span id="modal-servings"></span></p>
+      <p><strong>Calories:</strong> <span id="modal-calories"></span></p>
+      <h3>Ingredients:</h3>
+      <ul id="modal-ingredients"></ul>
+      <h3>Steps:</h3> 
+      <ol id="modal-steps"></ol>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
